@@ -1,12 +1,12 @@
 import json
 from datetime import datetime
-from ui import *
 
 
 
-arquivo1="c:\\Users\\milen\\OneDrive\\Área de Trabalho\\Trabalho de Python\\Trabalho-de-Python\\codigos\\data\\projetos.json"
-arquivo2="c:\\Users\\milen\\OneDrive\\Área de Trabalho\\Trabalho de Python\\Trabalho-de-Python\\codigos\\data\\usuarios.json"
-arquivo3="c:\\Users\\milen\\OneDrive\\Área de Trabalho\\Trabalho de Python\\Trabalho-de-Python\\codigos\\data\\tarefas.json"
+
+arquivo1="c:\\Users\\milen\\OneDrive\\Área de Trabalho\\Trabalho de Python\\trabalho_de_python2\\codigos\\data\\projetos.json"
+arquivo2="c:\\Users\\milen\\OneDrive\\Área de Trabalho\\Trabalho de Python\\trabalho_de_python2\\codigos\\data\\usuarios.json"
+arquivo3="c:\\Users\\milen\\OneDrive\\Área de Trabalho\\Trabalho de Python\\trabalho_de_python2\\codigos\\data\\tarefas.json"
 
 with open(arquivo1, 'r', encoding='utf-8') as f:
     dados1 = json.load(f)
