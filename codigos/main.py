@@ -102,10 +102,14 @@ while True:
                 if nome == "":
                     nome = usuarios[indice]["nome"]
                 email = input("novo email: ")
+                email_ja_cadastrado=False
                 for usuario in usuarios:
                     if email == usuario["email"]:
                         print("email já cadastrado!")
-                        break
+                        email_ja_cadastrado=True
+                if email_ja_cadastrado:
+                    time.sleep(1)
+                    break
                 if email == "":
                     email = usuarios[indice]["email"]
                 perfil = input("novo perfil: ")
@@ -285,11 +289,15 @@ while True:
                     print("a tarefa deve ter um responsável!")
                     time.sleep(1)
                     break
-                status_tarefa = padronizar_texto(input("status: "))
-                if status_tarefa not in ["pendente", "em andamento", "concluida"]:
+                status_tarefa=""
+                while status_tarefa not in ["pendente", "em andamento", "concluida", "cancelar"]:
+                    status_tarefa = padronizar_texto(input("status: "))
+                    if status_tarefa == "cancelar":
+                        break
+                    if status_tarefa in ["pendente", "em andamento", "concluida"]:
+                        break
                     print("status inválido!")
                     time.sleep(1)
-                    break
                 print("ex: YYYY/MM/DD")
                 prazo_tarefa = input("prazo: ")
                 if not data_valida(prazo_tarefa):

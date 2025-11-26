@@ -19,20 +19,20 @@ def carregar_usuarios():
 def atualizar_usuarios(usuarios):
     with open(ARQUIVO, "w", encoding = "utf-8") as f:
         json.dump(usuarios, f, indent = 4, ensure_ascii = False)
-
+carregar_usuarios()
 def carregar_tarefas():
     if not os.path.exists(ARQUIVO3):
         return []
     try:
         with open(ARQUIVO3, "r", encoding = "utf-8") as f:
-            usuarios = json.load(f)
-            return usuarios
+            tarefas = json.load(f)
+            return tarefas
     except json.JSONDecodeError:
         return []
 def atualizar_tarefas(tarefas):
     with open(ARQUIVO3, "w", encoding = "utf-8") as f:
         json.dump(tarefas, f, indent = 4, ensure_ascii = False)
-carregar_usuarios()
+carregar_tarefas()
 
 
 
