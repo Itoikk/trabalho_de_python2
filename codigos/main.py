@@ -281,6 +281,12 @@ while True:
 
 
                 responsavel_tarefa = input("responsável: ")
+                for responsavel in usuarios:
+                    if responsavel_tarefa == responsavel["nome"]:
+                        break
+                else:
+                    print("responsável não cadastrado!")
+                    time.sleep(1)
                 if responsavel_tarefa == "":
                     print("a tarefa deve ter um responsável!")
                     time.sleep(1)
