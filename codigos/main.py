@@ -155,15 +155,26 @@ while True:
                         break
                 descricao = input("descrição: ")
                 inicio = input("Digite a data de início(YYYY/MM/DD):")
-                if not data_valida(inicio):
+                try:
+                    inicio=datetime.strptime(inicio, "%Y/%m/%d")
+                except ValueError:
                     print("data inválida")
                     time.sleep(1)
                     break
                 fim = input("Digite a data de encerramento(YYYY/MM/DD):")
-                if not data_valida(fim):
+                try:
+                    fim=datetime.strptime(fim, "%Y/%m/%d")
+                except ValueError:
                     print("data inválida")
                     time.sleep(1)
                     break
+                if fim<=inicio:
+                    print("data de encerramento deve ser maior que a data de início!")
+                    time.sleep(1)
+                    break
+                else:
+                    fim=str(fim)
+                    inicio=str(inicio)               
                 adicionar_projeto(nome_projeto, inicio, fim, descricao)
                 break
             
@@ -210,19 +221,26 @@ while True:
                 if nome_projeto1 == "":
                     nome_projeto1 = projetos[indice]["nome"]
                 inicio_projeto1 = input("nova data de inicio(YYYY/MM/DD): ")
-                if not data_valida(inicio_projeto1):
+                try:
+                    inicio_projeto1=datetime.strptime(inicio_projeto1, "%Y/%m/%d")
+                except ValueError:
                     print("data inválida")
                     time.sleep(1)
                     break
-                if inicio_projeto1 == "":
-                    inicio_projeto1 = projetos[indice]["inicio"]
                 fim_projeto1 = input("nova data de encerramento(YYYY/MM/DD): ")
-                if not data_valida(fim_projeto1):
+                try:
+                    fim_projeto1=datetime.strptime(fim_projeto1, "%Y/%m/%d")
+                except ValueError:
                     print("data inválida")
                     time.sleep(1)
                     break
-                if fim_projeto1 == "":
-                    fim_projeto1 = projetos[indice]["fim"]
+                if fim_projeto1<=inicio_projeto1:
+                    print("data de encerramento deve ser maior que a data de início!")
+                    time.sleep(1)
+                    break
+                else:
+                    fim_projeto1=str(fim_projeto1)
+                    inicio_projeto1=str(inicio_projeto1)
                 descricao_projeto1 = input("nova descricao: ")
                 if descricao_projeto1 == "":
                     descricao_projeto1 = projetos[indice]["descricao"]
