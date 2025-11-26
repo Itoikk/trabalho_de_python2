@@ -6,10 +6,10 @@ from utils import *
 from datetime import datetime
 
 import os, sys, json, time
-projetos=[]
 while True:
     usuarios = carregar_usuarios()
     tarefas = carregar_tarefas()
+    projetos = carregar_projetos()
     os.system("cls")
     menu_inicio()
     opcao_menu = input("")
@@ -128,7 +128,6 @@ while True:
                 break              
     elif opcao_menu == "2":
         print("Você escolheu Projetos!")
-        time.sleep(1)
         while True:
             #Projetos
             projetos = carregar_projetos()
@@ -274,8 +273,13 @@ while True:
                     time.sleep(1)
                     break
                 projeto_tarefa = input("projeto: ")
-
-
+                for projeto in projetos:
+                    if projeto_tarefa == projeto["nome"]:
+                        break
+                else:
+                    print("Projeto não existe!")
+                    time.sleep(1)
+                    break
                 responsavel_tarefa = input("responsável: ")
                 if responsavel_tarefa == "":
                     print("a tarefa deve ter um responsável!")

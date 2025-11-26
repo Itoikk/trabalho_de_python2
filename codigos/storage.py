@@ -1,10 +1,10 @@
 import json
 import os
-ARQUIVO = "Trabalho-de-Python/codigos/data/usuarios.json"
-ARQUIVO3 = "Trabalho-de-Python/codigos/data/tarefas.json"
-ARQUIVO2= "Trabalho-de-Python/codigos/data/projetos.json"
+ARQUIVO = "trabalho_de_Python2/codigos/data/usuarios.json"
+ARQUIVO3 = "trabalho_de_Python2/codigos/data/tarefas.json"
+ARQUIVO2= "trabalho_de_Python2/codigos/data/projetos.json"
 usuarios = []
-projeto = []
+projetos = []
 tarefas = []
 
 def carregar_usuarios():

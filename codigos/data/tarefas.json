@@ -1,19 +1,5 @@
 [
     {
-        "titulo": "teste1",
-        "projeto": "testa",
-        "responsavel": "testador",
-        "status": "em andamento",
-        "prazo": "2025/12/05"
-    },
-    {
-        "titulo": "PBCteste",
-        "projeto": "tabela",
-        "responsavel": "gustavo",
-        "status": "em andamento",
-        "prazo": "2025/12/13"
-    },
-    {
         "titulo": "Tarefa Python",
         "projeto": "ProjetoPBC",
         "responsavel": "Ricardo",
@@ -21,24 +7,24 @@
         "prazo": "2025/12/01"
     },
     {
-        "titulo": "teste10",
-        "projeto": "testa",
-        "responsavel": "ricardo",
-        "status": "concluida",
-        "prazo": "2025/11/25"
-    },
-    {
-        "titulo": "a",
-        "projeto": "example",
-        "responsavel": "ricardo",
-        "status": "concluida",
-        "prazo": "2025/10/26"
-    },
-    {
         "titulo": "albuquerque",
         "projeto": "example",
         "responsavel": "a",
         "status": "pendente",
         "prazo": "2024/12/20"
+    },
+    {
+        "titulo": "aa",
+        "projeto": "ProjetoPBC",
+        "responsavel": "neymar",
+        "status": "concluida",
+        "prazo": "2000/10/10"
+    },
+    {
+        "titulo": "teste",
+        "projeto": "ProjetoPBC",
+        "responsavel": "bart",
+        "status": "em andamento",
+        "prazo": "2025/12/05"
     }
 ]
